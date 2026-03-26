@@ -5,18 +5,47 @@
 <html>
 	<head>
 		<title>Portfolio Homepage</title>
-	</head>
-  <body>
+    </head>
+    <body>
 
-    {% include navbar.html %}
+        {% include navbar.html %}
 
-    <div>
-      <h1>Colin Welsh</h1>
-      <img id="professionalPhoto" src="Photos/Professional_Photo.png">
-      <p>Hello! My name is Colin Welsh. I am a mechanical engineering major at Rose-Hulman Institute of Technology with a minor in computer science. I love puzzles and problem-solving and enjoy any kind of design work I can get my hands on.</p>
-    </div>
+        <div>
+        <h1>Projects</h1>
+        <h2>KIC Mini Golf Senior Capstone</h2>
+        <p>This project is a mini golf hole, intended to be played by prospective visiting students as well as anyone else on Rose-Hulman's campus. The hole includes a Plinko board and various electro-mechanical systems to allow for keeping score and to add a little extra fun and surprise to the experience. <a href="https://kic-mini-golf.netlify.app/">A website that showcases the main components of the project</a> is currently being developed.</p>
+        <img id="assemblyImage" src="Photos/mini_golf_assembly.png" onmouseover="videoHover()">
+            <video id="plinkoVideo" class="plinko hidden" muted onmouseout="videoUnhover()">
+                <source src="Videos/Plinko_Explode.mp4" type="video/mp4">
+            </video>
+        </div>
 
-    {% include footer.html %}
+        {% include footer.html %}
 
-  </body>
+    </body>
+    <script>
+    // Create variables for the exploded plinko view
+    const img = document.getElementById("plinkoImage");
+    const video = document.getElementById("plinkoVideo");
+    const div = document.getElementById("projectInfo");
+
+    // Changes an image to a video, will be used for exploded views
+    function videoHover() {
+        img.classList.add("hidden");
+        video.classList.remove("hidden");
+        video.play();
+    }
+
+    // Changes the video back to an image when hover ends
+    function videoUnhover() {
+        img.classList.remove("hidden");
+        video.classList.add("hidden");
+        video.pause();
+        video.currentTime = 0;
+    }
+
+    function scrollToProject() {
+        div.scrollIntoView({behavior: "smooth"});
+    }
+    </script>
 </html>
