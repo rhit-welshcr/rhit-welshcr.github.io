@@ -13,6 +13,11 @@
     color: black;
 }
 
+.div4 {
+    background-color: black;
+    color: white;
+}
+
 #navbar {
     background-color: black;
     display: flex;
@@ -37,4 +42,9 @@
 footer {
     background-color: black;
     color:white;
+}
+
+#professionalPhoto {
+    width: 200px;
+    height: 250px;
 }
