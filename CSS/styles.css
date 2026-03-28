@@ -103,7 +103,13 @@ h2 {
     align-items: center;
 }
 
-#explode {
+.explode {
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+}
+
+.explode img, .explode video {
     position: absolute;
     top: 0;
     left: 0;
