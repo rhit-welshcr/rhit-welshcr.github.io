@@ -70,6 +70,23 @@ h2 {
 }
 
 #welcome {
+    text-align: center;
+}
+
+#assemblyImage {
     display: flex;
     justify-content: center;
+    width: 300px;
+    height: 250px;
+}
+
+#plinkoVideo {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 250px;
+}
+
+.annoyingElements {
+    margin-bottom: 0;
 }
